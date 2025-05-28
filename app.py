@@ -11,9 +11,9 @@ model = tf.keras.applications.MobileNetV2(weights="imagenet")
 # Load the zero-shot classification pipeline from HuggingFace
 classifier = pipeline(
     "zero-shot-classification", 
-    model="facebook/bart-large-mnli", 
-    device_map="auto"  # <== automatically handles device placement
+    model="facebook/bart-large-mnli"
 )
+
 
 # Function to preprocess image
 def preprocess_image(image):
